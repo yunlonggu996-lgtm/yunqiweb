@@ -197,7 +197,7 @@
                 });
             }
 
-            函数 animate() {
+            function animate() {
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
                 for (let i = 0; i < particles.length; i++) {
                     const p = particles[i];
@@ -208,20 +208,20 @@
                     p.x += p.speedX;
                     p.y += p.speedY;
 
-                    如果(p.x<0||>画布宽度)速度X*= -1;
-                    如果 (p.y < 0 || p.y > canvas.高度) p.speedY *= -1;
+                    if (p.x < 0 || p.x > canvas.width) p.speedX *= -1;
+                    if (p.y < 0 || p.y > canvas.height) p.speedY *= -1;
                 }
                 requestAnimationFrame(animate);
             }
 
-            动画();
+            animate();
 
             window.addEventListener('resize', function() {
                 canvas.width = window.innerWidth;
                 canvas.height = window.innerHeight;
             });
         });
-    </脚本>
+    </script>
 
     <!-- 滚动动画效果 -->
     <script>
@@ -230,7 +230,7 @@
             
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
-                    如果 (entry.isIntersecting) {
+                    if (entry.isIntersecting) {
                         entry.target.classList.add('active');
                     }
                 });
@@ -242,6 +242,6 @@
                 observer.observe(element);
             });
         });
-    </脚本>
+    </script>
 </body>
-        </html>
+</html>
