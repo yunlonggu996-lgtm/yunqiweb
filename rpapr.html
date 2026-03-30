@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPA 教练角色定义与价值创造路径全景图</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6',
+                        secondary: '#64748b',
+                        accent: '#10b981',
+                        danger: '#ef4444',
+                        light: '#f8fafc',
+                        dark: '#1e293b'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                },
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .card-hover {
+                transition: all 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            }
+            .fade-in {
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 0.6s ease, transform 0.6s ease;
+            }
+            .fade-in.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fa fa-robot text-primary text-2xl"></i>
+                <h1 class="text-xl font-bold text-dark">RPA 教练</h1>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#core-definition" class="text-gray-600 hover:text-primary transition-colors">核心定义</a>
+                <a href="#responsibilities" class="text-gray-600 hover:text-primary transition-colors">职责与边界</a>
+                <a href="#comparison" class="text-gray-600 hover:text-primary transition-colors">角色对比</a>
+                <a href="#value-path" class="text-gray-600 hover:text-primary transition-colors">价值创造</a>
+                <a href="#growth-ladder" class="text-gray-600 hover:text-primary transition-colors">成长阶梯</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 focus:outline-none">
+                <i class="fa fa-bars text-xl"></i>
+            </button>
+        </div>
+        <!-- 移动端菜单 -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-2 flex flex-col space-y-3">
+                <a href="#core-definition" class="text-gray-600 hover:text-primary transition-colors py-2">核心定义</a>
+                <a href="#responsibilities" class="text-gray-600 hover:text-primary transition-colors py-2">职责与边界</a>
+                <a href="#comparison" class="text-gray-600 hover:text-primary transition-colors py-2">角色对比</a>
+                <a href="#value-path" class="text-gray-600 hover:text-primary transition-colors py-2">价值创造</a>
+                <a href="#growth-ladder" class="text-gray-600 hover:text-primary transition-colors py-2">成长阶梯</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 英雄区域 -->
+    <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16 md:py-24">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-shadow">RPA 教练角色定义与价值创造路径全景图</h1>
+            <p class="text-lg md:text-xl opacity-90 max-w-3xl mx-auto">推动客户自动化成功，从"单点落地"走向"持续价值与能力沉淀"</p>
+        </div>
+    </section>
+
+    <!-- 核心定义 -->
+    <section id="core-definition" class="py-16 bg-white fade-in">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-dark mb-4">一、角色核心定义</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-light p-8 rounded-lg shadow-md card-hover">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fa fa-bullseye"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">核心使命</h3>
+                    <p class="text-gray-600">推动客户自动化成功，从"单点落地"走向"持续价值与能力沉淀"。</p>
+                </div>
+                
+                <div class="bg-light p-8 rounded-lg shadow-md card-hover">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fa fa-tag"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">一句话定位</h3>
+                    <p class="text-gray-600">RPA 教练不是"教产品的人"，而是"把客户自动化做成的人"。</p>
+                </div>
+                
+                <div class="bg-light p-8 rounded-lg shadow-md card-hover">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fa fa-diamond"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">角色本质</h3>
+                    <p class="text-gray-600">面向客户业务落地结果，通过场景识别、方案辅导与能力迁移，降低自动化落地的不确定性。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 职责与边界 -->
+    <section id="responsibilities" class="py-16 bg-gray-50 fade-in">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-dark mb-4">二、核心职责与边界</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+            </div>
+
+            <!-- 核心职责 -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-semibold mb-8 text-center">1. 核心职责 (What to do)</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full bg-white rounded-lg shadow-md">
+                        <thead class="bg-primary text-white">
+                            <tr>
+                                <th class="py-4 px-6 text-left">职责模块</th>
+                                <th class="py-4 px-6 text-left">关键动作</th>
+                                <th class="py-4 px-6 text-left">交付物/结果</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr class="hover:bg-gray-50">
+                                <td class="py-4 px-6 font-medium">场景识别</td>
+                                <td class="py-4 px-6">挖掘高价值、可落地的业务机会，剔除伪需求</td>
+                                <td class="py-4 px-6">场景清单 & 优先级排序</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="py-4 px-6 font-medium">流程拆解</td>
+                                <td class="py-4 px-6">将业务语言翻译为流程节点、规则与异常处理</td>
+                                <td class="py-4 px-6">标准流程图 (PFD) / 逻辑文档</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="py-4 px-6 font-medium">落地辅导</td>
+                                <td class="py-4 px-6">指导搭建、调试与上线，而非盲目代做</td>
+                                <td class="py-4 px-6">稳定运行的自动化流程</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="py-4 px-6 font-medium">能力建设</td>
+                                <td class="py-4 px-6">培养客户种子用户，沉淀内部操作规范</td>
+                                <td class="py-4 px-6">客户自驱动能力</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="py-4 px-6 font-medium">价值复盘</td>
+                                <td class="py-4 px-6">提炼节省工时、提效等证据，向管理层汇报</td>
+                                <td class="py-4 px-6">价值复盘报告 / 标杆案例</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="py-4 px-6 font-medium">运行治理</td>
+                                <td class="py-4 px-6">监控运行状态，设计异常处理与回退机制</td>
+                                <td class="py-4 px-6">长期稳定的业务产出</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 职责边界 -->
+            <div>
+                <h3 class="text-2xl font-semibold mb-8 text-center">2. 职责边界 (Not to do)</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-md flex items-start">
+                        <div class="text-danger text-2xl mr-4 mt-1">
+                            <i class="fa fa-times-circle"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-2">不只是培训/答疑</h4>
+                            <p class="text-gray-600">拒绝做"高级客服"，必须挂钩落地结果。</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md flex items-start">
+                        <div class="text-danger text-2xl mr-4 mt-1">
+                            <i class="fa fa-times-circle"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-2">不做永久代做</h4>
+                            <p class="text-gray-600">拒绝做"外包实施"，核心是能力迁移。</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md flex items-start">
+                        <div class="text-danger text-2xl mr-4 mt-1">
+                            <i class="fa fa-times-circle"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-2">不背所有锅</h4>
+                            <p class="text-gray-600">不对客户内部管理失效、商务签约、产品底层缺陷负单责。</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md flex items-start">
+                        <div class="text-danger text-2xl mr-4 mt-1">
+                            <i class="fa fa-times-circle"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-2">不做无意义活跃</h4>
+                            <p class="text-gray-600">拒绝脱离业务价值的"假繁荣"。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RPA 教练 vs. 客户成功 -->
+    <section id="comparison" class="py-16 bg-white fade-in">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-dark mb-4">三、RPA 教练 vs. 客户成功 (CSM) 差异对照</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+            </div>
+
+            <div class="overflow-x-auto">
+                <table class="w-full bg-white rounded-lg shadow-md">
+                    <thead class="bg-primary text-white">
+                        <tr>
+                            <th class="py-4 px-6 text-left">维度</th>
+                            <th class="py-4 px-6 text-left">RPA 教练 (落地引擎)</th>
+                            <th class="py-4 px-6 text-left">客户成功 (经营牵引)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-4 px-6 font-medium">核心使命</td>
+                            <td class="py-4 px-6">把价值做出来</td>
+                            <td class="py-4 px-6">把价值经营下去</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-4 px-6 font-medium">关注点</td>
+                            <td class="py-4 px-6">场景、流程、稳定性、能力迁移</td>
+                            <td class="py-4 px-6">健康度、满意度、续费、增购</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-4 px-6 font-medium">主责结果</td>
+                            <td class="py-4 px-6">落地成功率、稳定运行数、种子用户数</td>
+                            <td class="py-4 px-6">续费率、NDR (增购)、客户关系</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-4 px-6 font-medium">典型动作</td>
+                            <td class="py-4 px-6">梳理流程、辅导搭建、运行复盘</td>
+                            <td class="py-4 px-6">经营对齐、风险治理、商务协同</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-4 px-6 font-medium">成功标志</td>
+                            <td class="py-4 px-6">客户真的上线了、会做了、跑稳了</td>
+                            <td class="py-4 px-6">客户认可价值、续约了、扩科了</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- 存量客户价值创造路径 -->
+    <section id="value-path" class="py-16 bg-gray-50 fade-in">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-dark mb-4">四、存量客户价值创造路径</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+                <p class="mt-4 text-gray-600 max-w-3xl mx-auto">针对已签约客户，价值不是维护出来的，是 <span class="font-bold text-primary">重新创造</span> 出来的：</p>
+            </div>
+
+            <div class="relative">
+                <!-- 时间线 -->
+                <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-primary rounded-full"></div>
+                
+                <!-- 时间线项目 -->
+                <div class="space-y-12">
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0">
+                            <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                                <h3 class="text-xl font-semibold mb-3 text-primary">现状盘点</h3>
+                                <p class="text-gray-600">基于运行事实（而非印象）盘点存量场景与关键人状态。</p>
+                            </div>
+                        </div>
+                        <div class="z-10 w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-bold">1</div>
+                        <div class="md:w-1/2 md:pl-12"></div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-12"></div>
+                        <div class="z-10 w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-bold">2</div>
+                        <div class="md:w-1/2 md:pl-12 mb-6 md:mb-0">
+                            <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                                <h3 class="text-xl font-semibold mb-3 text-primary">断点诊断</h3>
+                                <p class="text-gray-600">找出价值停滞的根因（是场景没选好？还是运行不稳？还是人走了？）。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0">
+                            <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                                <h3 class="text-xl font-semibold mb-3 text-primary">资产治理</h3>
+                                <p class="text-gray-600">对旧流程进行"体检"，该优化的优化，该下线的下线，恢复信心。</p>
+                            </div>
+                        </div>
+                        <div class="z-10 w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-bold">3</div>
+                        <div class="md:w-1/2 md:pl-12"></div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-12"></div>
+                        <div class="z-10 w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-bold">4</div>
+                        <div class="md:w-1/2 md:pl-12 mb-6 md:mb-0">
+                            <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                                <h3 class="text-xl font-semibold mb-3 text-primary">机会重识</h3>
+                                <p class="text-gray-600">基于业务变化（如 AI 需求），重新扫描高价值新场景。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0">
+                            <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                                <h3 class="text-xl font-semibold mb-3 text-primary">重建机制</h3>
+                                <p class="text-gray-600">重新激活客户内部推进小组，对齐新一轮目标。</p>
+                            </div>
+                        </div>
+                        <div class="z-10 w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-bold">5</div>
+                        <div class="md:w-1/2 md:pl-12"></div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-12"></div>
+                        <div class="z-10 w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-bold">6</div>
+                        <div class="md:w-1/2 md:pl-12 mb-6 md:mb-0">
+                            <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                                <h3 class="text-xl font-semibold mb-3 text-primary">样板打穿</h3>
+                                <p class="text-gray-600">快速落地 1-2 个新样板，用"小闭环"重新证明价值。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0">
+                            <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                                <h3 class="text-xl font-semibold mb-3 text-primary">证据经营</h3>
+                                <p class="text-gray-600">将结果转化为管理层可理解的财务/业务指标。</p>
+                            </div>
+                        </div>
+                        <div class="z-10 w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-bold">7</div>
+                        <div class="md:w-1/2 md:pl-12"></div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-12"></div>
+                        <div class="z-10 w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-bold">8</div>
+                        <div class="md:w-1/2 md:pl-12 mb-6 md:mb-0">
+                            <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                                <h3 class="text-xl font-semibold mb-3 text-primary">商业转化</h3>
+                                <p class="text-gray-600">将价值证据转化为续费、扩科或行业标杆。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI 时代下 RPA 教练的成长阶梯 -->
+    <section id="growth-ladder" class="py-16 bg-white fade-in">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-dark mb-4">五、AI 时代下 RPA 教练的成长阶梯</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+                <p class="mt-4 text-gray-600 max-w-3xl mx-auto">当 AI 替代了基础答疑和简单代码后，RPA 教练必须向"高阶判断"进阶：</p>
+            </div>
+
+            <!-- 能力进阶模型 -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-semibold mb-8 text-center">1. 能力进阶模型</h3>
+                <div class="grid md:grid-cols-4 gap-6">
+                    <div class="bg-light p-6 rounded-lg shadow-md border-l-4 border-blue-400 card-hover">
+                        <div class="text-blue-400 text-3xl mb-4">
+                            <i class="fa fa-graduation-cap"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold mb-3">初阶 (工具辅导者)</h4>
+                        <p class="text-gray-600">熟练产品功能，解决"怎么点按钮"的问题。</p>
+                    </div>
+                    
+                    <div class="bg-light p-6 rounded-lg shadow-md border-l-4 border-blue-500 card-hover">
+                        <div class="text-blue-500 text-3xl mb-4">
+                            <i class="fa fa-rocket"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold mb-3">中阶 (落地推动者)</h4>
+                        <p class="text-gray-600">具备流程拆解与项目推进能力，解决"怎么上线"的问题。</p>
+                    </div>
+                    
+                    <div class="bg-light p-6 rounded-lg shadow-md border-l-4 border-blue-600 card-hover">
+                        <div class="text-blue-600 text-3xl mb-4">
+                            <i class="fa fa-lightbulb-o"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold mb-3">高阶 (场景判断者)</h4>
+                        <p class="text-gray-600">具备业务敏锐度，解决"该做什么最值钱"的问题。</p>
+                    </div>
+                    
+                    <div class="bg-light p-6 rounded-lg shadow-md border-l-4 border-blue-700 card-hover">
+                        <div class="text-blue-700 text-3xl mb-4">
+                            <i class="fa fa-crown"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold mb-3">顶阶 (方案架构师/价值经营者)</h4>
+                        <p class="text-gray-600">设计 人+AI+RPA 的协同系统，解决"生产力确定性"问题。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 核心能力升贬值 -->
+            <div>
+                <h3 class="text-2xl font-semibold mb-8 text-center">2. 核心能力升贬值</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-red-400">
+                        <div class="flex items-center mb-4">
+                            <div class="text-red-400 text-2xl mr-3">
+                                <i class="fa fa-arrow-down"></i>
+                            </div>
+                            <h4 class="text-lg font-semibold">贬值区</h4>
+                        </div>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fa fa-minus-circle text-red-400 mt-1 mr-2"></i>
+                                <span>标准产品教学</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-minus-circle text-red-400 mt-1 mr-2"></i>
+                                <span>基础答疑</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-minus-circle text-red-400 mt-1 mr-2"></i>
+                                <span>简单流程搭建</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-minus-circle text-red-400 mt-1 mr-2"></i>
+                                <span>纯文档讲解</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-green-400">
+                        <div class="flex items-center mb-4">
+                            <div class="text-green-400 text-2xl mr-3">
+                                <i class="fa fa-arrow-up"></i>
+                            </div>
+                            <h4 class="text-lg font-semibold">升值区</h4>
+                        </div>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fa fa-plus-circle text-green-400 mt-1 mr-2"></i>
+                                <span>业务场景判断</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-plus-circle text-green-400 mt-1 mr-2"></i>
+                                <span>AI+RPA 方案设计</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-plus-circle text-green-400 mt-1 mr-2"></i>
+                                <span>稳定运行治理</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-plus-circle text-green-400 mt-1 mr-2"></i>
+                                <span>价值证据提炼</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-plus-circle text-green-400 mt-1 mr-2"></i>
+                                <span>方法资产化</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 金句总结 -->
+    <section class="py-16 bg-gradient-to-r from-blue-600 to-blue-800 text-white fade-in">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-8">工作坊金句总结</h2>
+            <div class="max-w-3xl mx-auto">
+                <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg mb-6">
+                    <p class="text-lg">优秀的 RPA 教练，左手抓"场景判断"，右手抓"价值闭环"。</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
+                    <p class="text-lg">AI 时代，我们不只是在教自动化工具，而是在帮客户设计一套"确定性的生产力系统"。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center items-center space-x-4 mb-4">
+                <i class="fa fa-robot text-primary text-2xl"></i>
+                <h3 class="text-xl font-bold">RPA 教练角色定义与价值创造路径</h3>
+            </div>
+            <p class="text-gray-400">© 2026 RPA 教练工作坊</p>
+        </div>
+    </footer>
+
+    <!-- 回到顶部按钮 -->
+    <button id="back-to-top" class="fixed bottom-6 right-6 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300">
+        <i class="fa fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // 回到顶部按钮
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // 移动端菜单
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            // 切换图标
+            const icon = mobileMenuButton.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+        
+        // 点击移动端菜单项后关闭菜单
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                const icon = mobileMenuButton.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+        
+        // 滚动动画
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+        
+        fadeElements.forEach(element => {
+            observer.observe(element);
+        });
+    </script>
+</body>
+</html>
